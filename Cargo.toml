@@ -11,3 +11,7 @@ sqlx = { version = "0.7.3", features = [ "mysql", "runtime-tokio", "tls-rustls" 
 dotenv = "0.15.0"
 serde = { version = "1.0.197", feature = ["derive"] }
 serde_json = "1.0.114"
+
+[[bin]]
+name = "myapp"
+path = "src/main.rs"

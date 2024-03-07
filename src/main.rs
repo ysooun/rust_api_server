@@ -19,7 +19,7 @@ async fn main() -> std::io::Result<()> {
             .app_data(web::Data::new(pool.clone()))
             .route("/", web::get().to(main_page))
     })
-    .bind("127.0.0.1:8080")?
+    .bind("0.0.0.0:80")?
     .run()
     .await
 }
