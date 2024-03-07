@@ -10,14 +10,14 @@ Dockerfile
 
 
 트러블 슈팅
-* 정상적으로 이미지가 빌드 됬으나 배포가 되지 않는 현상
-  에러
+정상적으로 이미지가 빌드 됬으나 배포가 되지 않는 현상
+* 에러
   Error: Os { code: 99, kind: AddrNotAvailable, message: "Address not available" }
 
-  원인
+* 원인
   docker는 기본적으로 호스트 시스템의 OS와 아키텍쳐를 대상으로 이미지를 빌드합니다. 빌드한 결과를 확인해 보면 linux/arm64/v8로 빌드가 된 것을 확인 할 수 있습니다. 하지만 이렇게 빌드 했을 경우 리눅스 환경에서 이미지 배포가 되지 않습니다. 이를 해결하기 위해 docker 이미지로 빌드 할때 platform 부분을 지정해서 이미지를 빌드합니다.
 
-  해결
+* 해결
   docker buildx build --platform=linux/amd64 -t renum/rust:v0.0.11 . 
   이런 형태로 이미지를 빌드하면 리눅스 환경에서 정상적으로 이미지를 사용할 수 있다.
 
