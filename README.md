@@ -1,3 +1,6 @@
+
+![rustacean-orig-noshadow](https://github.com/ysooun/rust_api_server/assets/154872496/a7a85aa1-d472-41b8-8049-c67f435678f8)
+
 ### 구성
 ---
 1. Rust 언어를 사용해 health check가 가능한 api server 구성했습니다. 
