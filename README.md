@@ -10,7 +10,7 @@ Dockerfile
 
 
 트러블 슈팅
-<정상적으로 이미지가 빌드 됬으나 배포가 되지 않는 현상>
+정상적으로 이미지가 빌드 됬으나 배포가 되지 않는 현상
   에러
   Error: Os { code: 99, kind: AddrNotAvailable, message: "Address not available" }
 
